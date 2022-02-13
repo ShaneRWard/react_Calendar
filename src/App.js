@@ -1,22 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
+  // Get Date methods for breaking down dates  https://www.w3schools.com/js/js_date_methods.asp
+  const today = new Date();
+  console.log(today.getDate())
+  const currentHour = today.getHours();
+  const currentMinutes = today.getMinutes();
+
+  // Set Date methods  https://www.w3schools.com/js/js_date_methods_set.asp
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {currentHour + ":" + currentMinutes}
       </header>
     </div>
   );
